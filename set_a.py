@@ -35,9 +35,14 @@ characters wide, and each temperature should have 3 digits to the
 right of the decimal point.
 """
 
-
-
-
+def tempconvert():
+    tempcov = open('tempcov.txt', 'w')
+    for i in range(513):
+        Cel = (i - 300)
+        Fah = ((i - 300) * 9/5 + 32)
+        tempcov.write("% +10s %+3s %5.1f %+3s" % (Cel, "Celcius",  Fah, "Fahrenheit"))
+        tempcov.write('\n')
+tempconvert()
 """
 5.3 Open a file during a Pyhton session. Call the 'readline' method twice
 on that file, then call the 'readlines' method. What lines does the
