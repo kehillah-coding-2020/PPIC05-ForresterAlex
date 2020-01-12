@@ -2,7 +2,7 @@
 #
 # pp. 163, 165, 166
 #
-
+from functions import *
 """
 5.1 Write a program to read the 'rainfall.txt' file and the write out a
 new file called 'rainfallfmt.txt'. The new file should format each
@@ -42,8 +42,8 @@ def tempconvert():
         Fah = ((i - 300) * 9/5 + 32)
         tempcov.write("% +10s %+3s %5.1f %+3s" % (Cel, "Celcius",  Fah, "Fahrenheit"))
         tempcov.write('\n')
+
 tempconvert()
-tempcov.close()
 """
 5.3 Open a file during a Pyhton session. Call the 'readline' method twice
 on that file, then call the 'readlines' method. What lines does the
@@ -69,7 +69,7 @@ previous one.
 file where all the characters are in uppercase.
 """
 
-
+returnUpercase('rickastley.txt')
 
 """
 5.6 Write a program that reads in a file and then prints out the number
