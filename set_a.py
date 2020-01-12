@@ -43,13 +43,18 @@ def tempconvert():
         tempcov.write("% +10s %+3s %5.1f %+3s" % (Cel, "Celcius",  Fah, "Fahrenheit"))
         tempcov.write('\n')
 tempconvert()
+tempcov.close()
 """
 5.3 Open a file during a Pyhton session. Call the 'readline' method twice
 on that file, then call the 'readlines' method. What lines does the
 list reurned by 'readlines' include?
 """
 
+#readline prints a speciied number o characters, or if not specified, the whole
+#line, automatically advances to next line
 
+#readlines reads the whole file in plain text, not interpreting newline
+#characters
 
 """
 5.4 Open the file in Exercise 5.3 again, but call 'readlines'
