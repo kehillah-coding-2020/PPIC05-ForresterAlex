@@ -69,7 +69,9 @@ previous one.
 file where all the characters are in uppercase.
 """
 
-returnUpercase('rickastley.txt')
+upperfile = open('upperCaseFile.txt', 'w')
+upperfile.write(returnUpercase('rickastley.txt'))
+upperfile.close()
 
 """
 5.6 Write a program that reads in a file and then prints out the number

@@ -1,6 +1,7 @@
 def returnUpercase(file):
     file = open(file, 'r')
-    upperCaseFile = open('upperCase_' + file, 'w')
-    filecontent = file.readlines()
+    filecontent = ''
+    for lines in file:
+        filecontent = filecontent + file.readline()
     filecontentupper = filecontent.upper()
-    upperCaseFile.write(filecontentupper)
+    return filecontentupper
