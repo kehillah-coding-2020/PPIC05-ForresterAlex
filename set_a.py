@@ -87,3 +87,24 @@ is on more tha one line, the concordance will show you all of the
 lines containing that word. Hint: Use a dictionary keyed by each word
 to solve this problem.
 """
+
+lyrics = open('rickastley.txt', 'r')
+word_dict = {}
+line_num = 1
+for line in lyrics:
+    words = line.split()
+    for word in words:
+        word = word.lower()
+        word = word.strip()
+        for char in [',','.','?','(',')']:
+            word = word.replace(char,'')
+        if word in word_dict:
+            if line_num not in word_dict[word]:
+                word_dict[word].append(line_num)
+        else:
+            word_dict[word] = [line_num]
+    line_num = line_num + 1
+output = open('word_dict.txt', 'w')
+output.write(str(word_dict))
+output.close()
+print(word_dict)
