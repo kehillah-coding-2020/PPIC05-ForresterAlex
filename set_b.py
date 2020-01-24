@@ -2,7 +2,7 @@
 #
 # pp. 170, 171
 #
-
+from functions import *
 """
 5.8* Frequency tables are often created by placing data items in a range.
 Implement a function that will group the earthquake data by the
@@ -34,8 +34,14 @@ return a list of lists that looks something like this:
 
 
 
+print(date_sort("earthquakes.txt"))
+earthquake_data_dict = date_sort("earthquakes.txt")
+
+
 """
 5.11 Modify the function in the previous exercise to return a dictionary
 of key-value pairs where the key is the date and the value is a list
 of magnitudes for the earthquakes that occurred on that date.
 """
+print(earthquake_data_dict)
+print(dicctionary_to_list(earthquake_data_dict))
